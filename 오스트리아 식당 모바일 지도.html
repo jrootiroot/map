@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>오스트리아 식당 추천 지도</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+  <div id="map" style="width: 100%; height: 100vh;"></div>
+  <script>
+    var map = L.map('map').setView([48.2082, 16.3738], 6);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 18,
+    }).addTo(map);
+
+    L.marker([48.2047884, 16.3747544]).addTo(map)
+      .bindPopup('<b>Pho Saigon</b><br>스타일: 베트남<br>주요메뉴: 쌀국수 베트남 음식점<br>단가: €15~25');
+
+    L.marker([48.2085646, 16.3775313]).addTo(map)
+      .bindPopup('<b>Viva la Mamma</b><br>스타일: 이탈리안<br>주요메뉴: 파스타, 피자, 샐러드<br>단가: €35~45');
+
+    L.marker([48.210243, 16.3646849]).addTo(map)
+      .bindPopup('<b>Café Central</b><br>스타일: 전통 오스트리아<br>주요메뉴: 슈니첼, 굴라쉬, 커피/디저트<br>단가: €20~35');
+
+    L.marker([48.2164958, 16.4005013]).addTo(map)
+      .bindPopup('<b>Schweizerhaus</b><br>스타일: 오스트리아 전통 맥주홀<br>주요메뉴: 슈니첼, 족발, 맥주<br>단가: €25~40');
+
+    L.marker([48.2080875, 16.3790609]).addTo(map)
+      .bindPopup('<b>Plachutta Wollzeile</b><br>스타일: 전통 오스트리아<br>주요메뉴: 타펠슈피츠, 슈니첼<br>단가: €35~50');
+
+    L.marker([48.2087657, 16.3689516]).addTo(map)
+      .bindPopup('<b>Zum Schwarzen Kameel</b><br>스타일: 오스트리아 & 유럽 퓨전<br>주요메뉴: 카나페, 햄, 치즈, 와인<br>단가: €25~40');
+
+    L.marker([48.2101447, 16.3758727]).addTo(map)
+      .bindPopup('<b>Lugeck Figlmüller</b><br>스타일: 전통 + 모던 오스트리아<br>주요메뉴: 슈니첼, 감자샐러드, 맥주<br>단가: €25~35');
+
+    L.marker([47.0692843, 15.4394746]).addTo(map)
+      .bindPopup('<b>Area 5 Restaurant</b><br>스타일: 모던 인터내셔널<br>주요메뉴: 버거, 파스타, 샐러드<br>단가: €25~40');
+
+    L.marker([47.0707656, 15.4367641]).addTo(map)
+      .bindPopup('<b>Pfauengarten Buddha Style Bar</b><br>스타일: 일식/스시<br>주요메뉴: 마키, 초밥류<br>단가: €20~30');
+
+    L.marker([47.0000745, 15.4332996]).addTo(map)
+      .bindPopup('<b>Gasthof Pfleger</b><br>스타일: 슈타이리안 전통<br>주요메뉴: 수프, 구운고기, 감자, 맥주<br>단가: €18~30');
+
+    L.marker([46.997174, 15.406117]).addTo(map)
+      .bindPopup('<b>Didi Chen’s World of Asia Restaurant</b><br>스타일: 아시아 푸드 뷔페<br>주요메뉴: 뷔페 타입<br>단가: €20~30');
+
+    L.marker([48.3044036, 14.2885559]).addTo(map)
+      .bindPopup('<b>Gelbes Krokodil</b><br>스타일: 현대 오스트리아 가정식<br>주요메뉴: 수제요리, 비건 포함<br>단가: €15~25');
+
+    L.marker([47.068309, 15.4361415]).addTo(map)
+      .bindPopup('<b>Gösser Bräu (Graz)</b><br>스타일: 오스트리아 비어홀<br>주요메뉴: 굴라쉬, 슈니첼, 풀드 포크 버거<br>단가: €20~30');
+
+    L.marker([48.2998956, 14.2917733]).addTo(map)
+      .bindPopup('<b>Station183</b><br>스타일: 모던 유럽식<br>주요메뉴: 고기요리, 해산물, 와인<br>단가: €25~35');
+
+    L.marker([48.0533613, 14.1255654]).addTo(map)
+      .bindPopup('<b>Gasthaus Hüthmayr</b><br>스타일: 지역 메뉴<br>주요메뉴: 고기요리, 슈니첼<br>단가: €18~30');
+
+    L.marker([48.0499003, 14.1291531]).addTo(map)
+      .bindPopup('<b>McDaniels - Bar Burgerrestaurant</b><br>스타일: 햄버거류<br>주요메뉴: 햄버거<br>단가: €20~30');
+
+    L.marker([48.0504256, 14.1273925]).addTo(map)
+      .bindPopup('<b>Stiftsschank Kremsmünster</b><br>스타일: 오스트리아식 전통<br>주요메뉴: 전통 요리<br>단가: €18~30');
+
+    L.marker([48.1599361, 13.8826633]).addTo(map)
+      .bindPopup('<b>Gösser Bräu Wels</b><br>스타일: 오스트리아 브로이하우스<br>주요메뉴: 맥주 공장 직영, 메뉴 다양<br>단가: -');
+
+    L.marker([48.2402577, 16.4642036]).addTo(map)
+      .bindPopup('<b>Portobello</b><br>스타일: 이탈리안<br>주요메뉴: 피자, 파스타, 리조또<br>단가: €18~30');
+
+    L.marker([48.2262058, 16.4691715]).addTo(map)
+      .bindPopup('<b>Jussi</b><br>스타일: 현지 퓨전<br>주요메뉴: 수프, 샐러드, 메인디쉬<br>단가: €15~25');
+
+    L.marker([48.2115053, 16.3764228]).addTo(map)
+      .bindPopup('<b>Hard Rock Cafe</b><br>스타일: 아메리칸<br>주요메뉴: 버거, 샐러드, 그릴류<br>단가: €20~40');
+
+    L.marker([48.2130305, 16.3745744]).addTo(map)
+      .bindPopup('<b>Leto Restaurant Bar</b><br>스타일: 그리스/지중해<br>주요메뉴: 해산물, 수블라키, 샐러드, 깔라마리<br>단가: €25~40');
+
+    L.marker([48.2039127, 16.3459974]).addTo(map)
+      .bindPopup('<b>RIBELLI</b><br>스타일: 이탈리안<br>주요메뉴: 피자, 파스타, 티라미수<br>단가: €25~35');
+
+  </script>
+</body>
+</html>
